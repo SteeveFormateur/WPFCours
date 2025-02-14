@@ -6,7 +6,33 @@
         xmlns:local="clr-namespace:WPFProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+
+    <Grid x:Name="maGrille">
+        <TextBox x:Name="txtNom" Width="200" Height="30" Text="ASSOUS" 
+                 Margin="180,194,420,210" 
+                 FontFamily="Arial Narrow" FontSize="20"/>
+
+        <Button Content="Click Here" HorizontalAlignment="Left" 
+                Margin="405,194,0,0" VerticalAlignment="Top" 
+                Height="30" Width="120" Background="#FF365D80" 
+                FontWeight="Bold" FontFamily="Arial Narrow" FontSize="20"/>
+
+        <local:Smiley x:Name="MySmiley" HorizontalAlignment="Left" 
+                Margin="447,250,0,0" VerticalAlignment="Top" 
+                Height="30" Width="30" local:Etat="Content"
+                FontWeight="ExtraBold"  FontFamily="Arial Narrow" FontSize="25" 
+                       RenderTransformOrigin="0.5,0.5" Click="MySmiley_Click"
+                >
+            <local:Smiley.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:Smiley.RenderTransform>
+        </local:Smiley>
+
 
     </Grid>
 </Window>

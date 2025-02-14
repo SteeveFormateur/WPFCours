@@ -20,5 +20,46 @@ namespace WPFProject
         {
             InitializeComponent();
         }
+
+        private void MySmiley_Click(object sender, RoutedEventArgs e)
+        {
+            if (((Smiley)sender).Etat == "Content")
+            { ((Smiley)sender).Etat = "Triste"; }
+            else { ((Smiley)sender).Etat = "Content"; }
+        }
     }
+
+
+    #region "MyControl : Smiley"
+    public class Smiley : Button
+    {
+        private string etat;
+        public Smiley():base()
+        {
+            this.Background = new SolidColorBrush(Color.FromRgb(255, 255, 102));
+
+        }
+
+        //public enum Humeur { Content, Triste}
+        public string? Etat {
+            get { return this.etat; }
+            set {
+                this.etat = value;
+                if (this.etat == "Content")
+                {
+                    this.Content = ":-)";
+                }
+                else
+                {
+                    this.Content = ":-(";
+                }
+            } 
+        }
+        
+    }
+
+
+    #endregion
+
+
 }
