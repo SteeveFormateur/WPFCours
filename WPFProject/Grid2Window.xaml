@@ -1,0 +1,52 @@
+﻿<Window x:Class="WPFProject.Grid2Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProject"
+        mc:Ignorable="d"
+        Title="Grid2Window" Height="450" Width="800">
+    <!--<Grid x:Name="GridPanel1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Content="Btn 1" Width="200"Background="Orange" ></Button>
+        <Button Content="Btn 2" Width="100"Background="DarkOrange" ></Button>
+    </Grid>-->
+    <!--<Grid x:Name="GridPanel2">
+        <Grid.ColumnDefinitions>
+            --><!-- auto : la colonne prend la taille du controle -->
+            <!-- *    : la largeur de la colonne s'adapte à la taille de la fenetre --><!--
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Content="Btn 1" Width="200" Grid.Column="0" Background="Orange" ></Button>
+        <Button Content="Btn 2" Width="100" Grid.Column="1" Background="DarkOrange" ></Button>
+        <Button Content="Btn 3" Width="100" Grid.Column="0" Background="DarkCyan" ></Button>
+    </Grid>-->
+    <Grid x:Name="GridPanel3">
+        <Grid.ColumnDefinitions>
+
+            <!-- auto : la colonne prend la taille du controle -->
+            <!-- *    : la largeur de la colonne s'adapte à la taille de la fenetre -->      
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!-- auto : la colonne prend la taille du controle -->
+            <!-- *    : la largeur de la colonne s'adapte à la taille de la fenetre -->      
+            <!-- 2*    : la hauteur de la ligne s'adapte à la taille de la fenetre -->      
+            <!-- 1*    : la hauteur de la ligne s'adapte à la taille de la fenetre -->      
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>        
+        <Button Content="Btn 1" Width="200" Grid.Row="0" Grid.Column="1" Background="Orange" ></Button>
+        <Button Content="Btn 2" Width="100" Grid.Row="1" Grid.Column="1" 
+                Background="DarkOrange" 
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                ></Button>
+        <Button Content="Btn 3" Width="100" Grid.Row="1" Grid.Column="0" Background="DarkCyan" ></Button>
+    </Grid>
+</Window>
