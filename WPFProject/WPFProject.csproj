@@ -8,4 +8,25 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="GSStylesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GridSplitterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Grid2Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Grid2Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

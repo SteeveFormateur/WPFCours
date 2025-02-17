@@ -37,7 +37,10 @@ namespace WPFProject
         public Smiley():base()
         {
             this.Background = new SolidColorBrush(Color.FromRgb(255, 255, 102));
-
+            this.HorizontalAlignment = HorizontalAlignment.Left;
+            this.VerticalAlignment = VerticalAlignment.Top;
+            this.Margin = new Thickness(447, 250, 0, 0);
+           
         }
 
         //public enum Humeur { Content, Triste}
