@@ -9,6 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\icones\quit.png" />
+    <None Remove="resources\icones\quitter.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\icones\quit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\icones\quitter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="GSStylesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +41,10 @@
     <Page Update="Grid2Window.xaml">
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="resources\images\" />
   </ItemGroup>
 
 </Project>
