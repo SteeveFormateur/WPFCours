@@ -1,0 +1,74 @@
+﻿<Window x:Class="WPFProject.Student"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProject"
+        mc:Ignorable="d"
+        Title="Student" Height="450" Width="800"
+        MouseEnter="Control_MouseEnter">
+    <Window.Resources>
+        <Style TargetType="RadioButton"     BasedOn="{StaticResource RequiredInputStyle}"/>
+        <Style TargetType="TextBox"         BasedOn="{StaticResource RequiredInputStyle}"/>
+        <Style TargetType="DatePicker"      BasedOn="{StaticResource RequiredInputStyle}"/>
+    </Window.Resources>
+    <Grid x:Name="grGlobal" MouseEnter="Control_MouseEnter">
+        <DockPanel LastChildFill="True">
+            <ToolBar DockPanel.Dock="Top" Width="auto" Height="30" MouseEnter="Control_MouseEnter">
+                <Button x:Name="btnQuit" Width="30" Height="30" Click="btnQuit_Click" MouseEnter="Control_MouseEnter">
+                    <Image Source="resources/icones/quitter.png"/>
+                </Button>
+                <!--<Button x:Name="myBtn_DetailsTab_Save" FlowDirection="LeftToRight"  HorizontalAlignment="Left" Margin="835,544,0,0" VerticalAlignment="Top"  Width="143" Height="53" BorderBrush="#FF0F6287" 
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                        FontFamily="B Titr" FontSize="15" FontWeight="Bold" BorderThickness="2">
+                    <StackPanel HorizontalAlignment="Stretch" Background="#FF1FB3F5" Cursor="Hand" >
+                        <Image HorizontalAlignment="Left"  Source="Resources\icones\quit.png" Height="36" Width="124" />
+                        <TextBlock HorizontalAlignment="Center" Width="84" Height="22" VerticalAlignment="Top" Margin="0,-31,-58,0" Text="ثبت مشتری" />
+                    </StackPanel>
+                </Button>-->
+            </ToolBar>
+
+            <StatusBar DockPanel.Dock="Bottom" Height="20" Width="auto"/>
+            <TreeView DockPanel.Dock="Left" Width="200"/>
+            <Grid x:Name="GridPanel3">
+                <Grid.ColumnDefinitions>
+
+                    <!-- auto : la colonne prend la taille du controle -->
+                    <!-- *    : la largeur de la colonne s'adapte à la taille de la fenetre -->
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <!-- auto : la colonne prend la taille du controle -->
+                    <!-- *    : la largeur de la colonne s'adapte à la taille de la fenetre -->
+                    <!-- 2*    : la hauteur de la ligne s'adapte à la taille de la fenetre -->
+                    <!-- 1*    : la hauteur de la ligne s'adapte à la taille de la fenetre -->
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Nom"    Width="100" Height="30" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"></Label>
+                <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Height="30" Width="200"/>
+                <Label Content="Prénom" Width="100" Height="30" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"></Label>
+                <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Height="30" Width="200"/>
+                <Label Content="Sexe"   Width="100" Height="30" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"></Label>
+                <StackPanel Margin="10,5,0,0" Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                    <RadioButton Width="100" Height="30" GroupName="Sexes">Masculin</RadioButton>
+                    <RadioButton Width="100" Height="30" GroupName="Sexes">Feminin</RadioButton>
+                </StackPanel>
+                <Label Content="Date de Naissance"  Width="100" Height="30" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"></Label>
+                <DatePicker  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center"  Width="300" Height="30"/>
+                <Button Grid.Row="4" Grid.Column="1" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnQuit_Click" MouseEnter="Control_MouseEnter">
+                    <Image Source="resources/icones/quitter.png"/>
+                </Button>
+
+
+
+
+            </Grid>
+        </DockPanel>
+
+    </Grid>
+</Window>
